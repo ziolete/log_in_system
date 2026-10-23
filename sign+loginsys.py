@@ -1,7 +1,5 @@
 import sqlite3
 from passlib.hash import argon2
-global istrue
-isTrue = True
 con = sqlite3.connect("users.db")
 cur = con.cursor()
 cur.execute("CREATE TABLE IF NOT EXISTS users (username TEXT PRIMARY KEY, password TEXT)")   
@@ -16,7 +14,7 @@ def choice():
         elif choice1 == 'q' or choice1 == 'Q':
             break
 
-    
+
 
 def register():
     getuser = input("Enter your username:")
